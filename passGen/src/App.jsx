@@ -62,7 +62,7 @@ const passwordRef = useRef(null)
           <input id='charInput' type="checkbox" defaultChecked={charAllowed} onChange={()=>{setCharAllowed((prev)=>!prev)}}/>
           <label htmlFor="charInput">character</label>
         </div>
-
+        
       </div>
     </div>
     </>
