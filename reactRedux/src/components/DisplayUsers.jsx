@@ -1,8 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
-
+import {MdDeleteForever} from 'react-icons/md'
 const DisplayUsers = () => {
+  // To access data we use useSelector which takes a callback with argument state.This state act as global state for different slice
   const data = useSelector((state)=>{
     return state.users                     //now we have access to states of users
   })
@@ -10,7 +11,10 @@ const DisplayUsers = () => {
     <Wrapper>
       {
         data.map((user, id)=>{
-          return <li key={id}>{user}</li>
+          return <li key={id}>
+            {user}
+            <button className='btn btn-delete'><MdDeleteForever className="delete-icon"/></button>
+          </li>
         })
       }
     </Wrapper>
