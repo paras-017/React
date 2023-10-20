@@ -1,9 +1,10 @@
 import React from 'react'
-import DeleteUser from './DeleteUser'
+import DeleteUser from './DeleteUsers'
 import styled from "styled-components";
 import { fakeUserdata } from '../api';
 import {useDispatch} from 'react-redux'
 import { addUser } from '../store/slices/UserSlice';
+import DisplayUsers from './DisplayUsers';
 
 const UserDetails = () => {
   const dispatch = useDispatch()
@@ -20,8 +21,7 @@ const UserDetails = () => {
             <button className='btn add-btn' onClick={()=>addNewUser(fakeUserdata())}>Add New Users</button>
         </div>
         <ul>
-            <li>Hello - 1</li>
-            <li>Hello - 2</li>
+           <DisplayUsers/>
         </ul>
         <hr />
         <DeleteUser/>
