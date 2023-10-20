@@ -1,9 +1,10 @@
-import {configureStore} from "@redux/toolkit"
-import UserSlice from "./slices/UserSlice"
+import {configureStore} from "@reduxjs/toolkit"
+import userSlice from "./slices/UserSlice"
  
 const store = configureStore({
+    // global reducer
     reducer:{
-        users: UserSlice
+        users: userSlice
     }
 })
 export default store
