@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
+import {clearAllUsers} from '../actions'
 
 const userSlice = createSlice({
    name:"user",
@@ -18,7 +19,8 @@ const userSlice = createSlice({
 
    // ExtraReducer: A microReducer which is define in one of the slicers(ex:clearAllUsers) and if you need that reducer in multiple slicers , then we can achive this by using ExtraReducers
    extraReducers(builder){
-     builder.addCase(userSlice.actions.clearAllUsers,()=>{
+   //   builder.addCase(userSlice.actions.clearAllUsers,()=>{
+     builder.addCase(clearAllUsers,()=>{
       return  []
      })
    }
@@ -26,4 +28,4 @@ const userSlice = createSlice({
 
 // export {userSlice}
 export default userSlice.reducer
-export const {addUser,removeUser,clearAllUsers} = userSlice.actions
+export const {addUser,removeUser} = userSlice.actions
