@@ -11,10 +11,19 @@ const userSlice = createSlice({
     removeUser(state,action){
       state.splice(action.payload, 1)
     },
-    deleteUser(state,action){}
+   //  clearAllUsers(state,action){
+   //    return  []
+   //  }
+   },
+
+   // ExtraReducer: A microReducer which is define in one of the slicers(ex:clearAllUsers) and if you need that reducer in multiple slicers , then we can achive this by using ExtraReducers
+   extraReducers(builder){
+     builder.addCase(userSlice.actions.clearAllUsers,()=>{
+      return  []
+     })
    }
 })
 
 // export {userSlice}
 export default userSlice.reducer
-export const {addUser,removeUser,deleteUser} = userSlice.actions
+export const {addUser,removeUser,clearAllUsers} = userSlice.actions
