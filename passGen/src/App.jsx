@@ -8,6 +8,7 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false)
   const [Password, setPassword] = useState('')
 // useRef
+
 const passwordRef = useRef(null)
 
 
@@ -27,7 +28,7 @@ const passwordRef = useRef(null)
   const copyPasswordToClipboard = useCallback(() => {
     
     // use of ref
-    passwordRef.current?.select()
+    passwordRef.current?.select()           //show blue color box when text is copied
     passwordRef.current?.setSelectionRange(0,4)
 
     window.navigator.clipboard.writeText(Password) 
