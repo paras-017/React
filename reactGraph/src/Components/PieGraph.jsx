@@ -75,4 +75,4 @@ const PieGraph = () => {
   )
 }
 
-export default PieGraph
+export default PieGraphf 
