@@ -63,8 +63,9 @@ const passwordRef = useRef(null)
         <div className='flex items-center gap-x-1'>
           <input id='charInput' type="checkbox" defaultChecked={charAllowed} onChange={()=>{setCharAllowed((prev)=>!prev)}}/>
           <label htmlFor="charInput">character</label>
-        </div>
-        
+        </div> 
+         
+
       </div>
     </div>
     </>

@@ -10,7 +10,7 @@ const authSlice = createSlice({
       console.log(action.payload)
      },
    },
-
+// Doremon lala la lalal  a 
    // ExtraReducer: A microReducer which is define in one of the slicers(ex:clearAllUsers) and if you need that reducer in multiple slicers , then we can achive this by using ExtraReducers
    extraReducers(builder){
    //   builder.addCase(userSlice.actions.clearAllUsers,()=>{
@@ -19,6 +19,8 @@ const authSlice = createSlice({
      })
    }
 })
+
+// tailwinn css: read
 
 // export {userSlice}
 export default authSlice.reducer
