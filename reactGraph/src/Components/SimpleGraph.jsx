@@ -55,6 +55,7 @@ const SimpleGraph = () => {
       </AreaChart>
     </div>
   )
+  
 }
 
 export default SimpleGraph
