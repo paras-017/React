@@ -2,8 +2,7 @@ import React from 'react'
 import {AreaChart, XAxis,YAxis,Area,Tooltip} from 'recharts'
 
 const SimpleGraph = () => {
-    const rangeData = [
-        {
+    const rangeData = [        {
           "day": "27-10",
           "temperature": [31, 18]
         },
